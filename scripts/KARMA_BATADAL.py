@@ -68,8 +68,8 @@ tf.config.experimental_run_functions_eagerly(True)
 
 
 # ============== Load Data ==============
-Training_BATADAL_RAW = pd.read_csv("BATADAL_Normal.csv")
-TEST_BATADAL_RAW = pd.read_csv("BATADAL_Attack.csv")
+Training_BATADAL_RAW = pd.read_csv("BATADAL_train.csv")
+TEST_BATADAL_RAW = pd.read_csv("BATADAL_test.csv")
 
 
 # ============== Test Dataset ==============
