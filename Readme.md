@@ -1,4 +1,4 @@
-KARMA: Knowledge Distillation to RBF-based Meta-Learner for Industrial Anomaly Detection
+KARMA: Lightweight Anomaly Detection for Industrial Control Systems via Knowledge Distillation
 -------------
 <span style="color:black;"> ***KARMA*** is a lightweight anomaly detection model, which utilizes ensemble learning and knowledge distillation for Industrial Control Systems (ICS). The model includes prediction values from ten state-of-the-art anomaly detection models that have been evaluated on two public datasets. </span>
 
