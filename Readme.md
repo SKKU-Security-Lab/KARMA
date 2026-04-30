@@ -48,4 +48,5 @@ python scripts/KARMA_SWaT.py
 #run on WADI 
 python scripts/KARMA_WADI.py</code></pre>
 
-
+#run on BATADAL 
+python scripts/KARMA_BATADAL.py</code></pre>
