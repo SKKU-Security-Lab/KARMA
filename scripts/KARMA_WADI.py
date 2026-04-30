@@ -65,43 +65,6 @@ from sklearn.metrics import matthews_corrcoef
 torch.manual_seed(42)
 tf.config.experimental_run_functions_eagerly(True)
 
-def calc_p2p(predict, actual):
-    tp = np.sum(predict * actual)
-    tn = np.sum((1-predict) * (1-actual))
-    fp = np.sum(predict * (1-actual))
-    fn = np.sum((1-predict) * actual)
-    
-    precision = tp / (tp + fp + 0.000001)
-    recall = tp / (tp + fn + 0.000001)
-    f1 = 2 * precision * recall / (precision + recall + 0.000001)
-    
-    return f1, precision, recall, tp, tn, fp, fn
-
-def get_trad_f1(score, label):
-    maxx = float(score.max())
-    minn = float(score.min())
-    
-    actual = label > 0.1
-    grain = 1000
-    max_f1 = 0.0
-    max_f1_thres = 0.0
-    p = 0
-    r = 0
-    for i in range(grain):
-        thres = (maxx-minn)/grain * i + minn
-        predict = score > thres
-        f1, precision, recall, tp, tn, fp, fn = calc_p2p(predict, actual)
-        if f1 > max_f1:
-            max_f1 = f1
-            max_f1_thres = thres
-            p = precision
-            r = recall
-            
-            
-    print("max f1 score is %f and threshold is %f\n" %(max_f1, max_f1_thres))
-    return max_f1, max_f1_thres, p, r
-
-
 # ============== Load Data ==============
 Training_WADI_RAW = pd.read_csv("WADI_train.csv")
 TEST_WADI_RAW = pd.read_csv("WADI_test.csv")
