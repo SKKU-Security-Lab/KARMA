@@ -57,8 +57,8 @@ torch.manual_seed(42)
 tf.config.experimental_run_functions_eagerly(True)
 
 # ============== Load Data ==============
-Training_SWaT_RAW = pd.read_csv("SWaT_Dataset_Normal.csv", skiprows=1)
-TEST_SWaT_RAW = pd.read_csv("SWaT_Dataset_Attack.csv") 
+Training_SWaT_RAW = pd.read_csv("SWaT_train.csv", skiprows=1)
+TEST_SWaT_RAW = pd.read_csv("SWaT_test.csv") 
 
 # ============== Test Dataset ==============
 C_TEST_SWaT_RAW = TEST_SWaT_RAW.drop([' Timestamp','label'], axis=1)
