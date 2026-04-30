@@ -11,7 +11,7 @@ To access the source code, clone this repository using the following command.
 **Clone the repo**
 
 ```bash
-git clone https://github.com/anonymous-code-dev/anonymous.git && cd KARMA 
+git clone https://github.com/SKKU-Security-Lab/KARMA.git && cd KARMA 
 ```
 
 **Dataset**
