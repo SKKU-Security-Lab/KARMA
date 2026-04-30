@@ -229,19 +229,7 @@ model = RBFNetwork(centroids, gamma)
 # Step 3: Define loss and optimizer with loaded 'lr'
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=lr)
-'''
-# Step 4: Train the RBF network
-n_epochs = 100
-for epoch in range(n_epochs):
-    model.train()
-    outputs = model(X_train_tensor)
-    loss = criterion(outputs, y_train_tensor)
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
 
-torch.save(model.state_dict(), f"teacher_model.pth")
-'''
 model.load_state_dict(torch.load(f"SWaT_teacher_model"))
 
 # Step 5: Evaluate the model on the test set
