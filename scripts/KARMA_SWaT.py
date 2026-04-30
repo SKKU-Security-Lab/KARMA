@@ -382,3 +382,4 @@ input = student_train_tensor[0].unsqueeze(0)
 student_flops, student_params = profile(student_model, inputs=(input,))
 print(f"Total FLOPs: {student_flops}")
 print(f"Total Parameters: {student_params}")
+
